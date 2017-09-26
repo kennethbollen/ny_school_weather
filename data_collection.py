@@ -65,3 +65,11 @@ df_all = pd.concat([df_all, df4])
 #import the weather data
 
 weather = pd.read_csv("weather_ny.csv", header=None)
+
+#set the date column as the index for the dataframe
+
+weather.set_index(weather[0], inplace=True)
+
+#remove the redundant date 
+
+del(weather[0])

@@ -61,3 +61,7 @@ del(df4["SchoolYear"])
 #concatenate 2006-2015 with 2015-2017
 
 df_all = pd.concat([df_all, df4])
+
+#import the weather data
+
+weather = pd.read_csv("weather_ny.csv", header=None)
